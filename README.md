@@ -48,8 +48,8 @@ Dependencies: Pandas, Matplotlib, Numpy, Citipy
 * Travelers can use this data to identify potential travel destinations based on weather preferences.
 
 ### Deliverable 2: Create a Customer Travel Destinations Map
-* Identified travelers weather preferences
-* Within preferences, we found the nearest hotel and added to DataFrame
+* Identified the traveler's weather preferences.
+* Within the traveler's weather preferences, we found the nearest hotel and added it to the DataFrame.
 * Generated a [map](https://github.com/corispade/World_Weather_Analysis/blob/main/Vacation_Search/WeatherPy_vacation_map.png) with pop-up markers to show hotel name, city, country and current weather description.
 
 ### Deliverable 3: Create a Travel Itinerary Map
@@ -58,4 +58,9 @@ Dependencies: Pandas, Matplotlib, Numpy, Citipy
 
 
 # Summary:
-Travelers can use this app to identify travel destinations based on their desired weather conditions, find the nearest hotels, current weather information and directions to other nearby cities. 
+Travelers can use this app to identify travel destinations based on their desired weather conditions. Based on their parameters, they can find the nearest hotels along with the current weather information. Lastly, they will be able to create a travel itenerary map using driving directions to other nearby cities. 
+
+Suggestions for app improvement:
+1. Add data for attractions in each city (restaurants, museums, theatres, historical attractions, etc.)
+2. Add cost information and parameters so travelers can filter cities and hotels by price
+3. Provide a customer feedback section where travelers can input their favorite cities and attractions for future travelers. 
