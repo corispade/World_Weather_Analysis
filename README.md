@@ -1,44 +1,61 @@
-# World_Weather_Analysis
+# WeatherPy Analysis
 
-TASK: Collect and Analyze weater data across cities worldwide
+# Overview
 
-PURPOSE: PlanMyTrip will use the data to recommend ideal hotels based on clients weather preferences
+Creating a PlanMyTrip app by retrieving weather data, creating a customer travel desinations map, and creating a travel itenerary map. Travelers will be able to input statments to filter data for their weather preferences, which will be used to identify potential travel destinations and nearby hotels. From the list of potential travel destinations, travelers can choose four cities to create a travel itenerary. Finally, using the Google Maps Directions API, we will create a travel route between the four cities along with a marker layer map.
 
-METHOD: Create Pandas DataFrame with 500 or more of the worlds unique cities and their weather data in real time. This process will entail collecting, analyzing and visualizing data
 
- 1. Collect the data:
-  - Use NumPy module to generate more than 1500 random latitudes and longitudes
-  - use the citypy module to list the nearest city to the latitiudes and longitudes
-  - Use the OpenWeatherMap API to request the current weather data from each unique city in your list
-  - Parse the JSON data from the API request
-  - Collect the following data from the JSON file and add it to a dataframe 
-     - City, Country and Date
-     - Latitude and Longitude
-     - Maximum temperature
-     - Humidity
-     - Cloudiness
-     - Wind Speed
- 
- 2. Exploratory Analysis:
-  - Create scatter plots of the weater data for the following comparisons:
-     - Latitude vs Temperature
-     - Latitude vs Humidity
-     - Latitude vs Cloudiness
-     - Latitude vs Wind Speed
-  - Determine the correlations for the following weather data:
-     - Latitude and Temperature
-     - Lat and Humidity
-     - Lat and Cloudiness
-     - Lat and Wind Speed
-  - Create a series of heat maps using the google maps and places API that showcases the following:
-     - Lat and Temp
-     - Lat and humidity
-     - Lat and cloudiness 
-     - Lat and wind speed
+## Process:
+### Deliverable 1: Retrieve Weather Data
 
- 3. Visualize Travel Data: Create a heatmap with pop-up markers that can display information on specific cities based on a customers travel preferences:
-  - Filter the Pandas DataFrame based on user inputs for a minimum and maximum temperature
-  - Create a heatmap for the new DataFrame
-  - Find a hotel from the cities coordinates using Google Maps and Places API, and Search Nearby feature
-  - Store the name of the first hotel in the DataFrame
-  - Add pop-up markers to the heatmap that display information about the city, current max temp, and a hotel in the city
+Step 1 - Generate a set of 2,000 random latitudes and longitudes
+
+Step 2 - Retrieve the nearest city
+
+Step 3 - Perform an API call with the OpenWeatherMap
+
+Step 4 - Retrieve the current weather description for each city
+
+Step 5 - Create a new DataFrame containing the updated weather data
+
+### Deliverable 2: Create a Customer Travel Destinations Map
+
+Step 1 - Create input statements to retrieve customer weather preferences
+
+Step 2 - Use those preferences to identify potential travel destinations and nearby hotels
+
+Step 3 - Show those destinations on a marker layer map with pop-up markers
+
+### Deliverable 3: Create a Travel Itinerary Map
+
+Step 1 - Use the Google Directions API to create a travel itinerary that shows the route between four cities chosen from the customer’s possible travel destinations
+
+Step 2- Create a marker layer map with a pop-up marker for each city on the itinerary
+
+## Resources:
+Sources: OpenWeatherMap, GoogleMaps
+
+Software: Python 3.7.6, Conda 4.10.1
+
+Environment: Jupyter Notebook
+
+Dependencies: Pandas, Matplotlib, Numpy, Citipy
+
+
+# Results:
+### Deliverable 1: Retrieve Weather Data: 
+* Generated a [DataFrame](https://github.com/corispade/World_Weather_Analysis/blob/main/Weather_Database/WeatherPy_DataFrame.png) with random cities, including all necessary information such as location, maximum temperature, percent humidity, percent cloudiness, wind speed and weather description. 
+* Travelers can use this data to identify potential travel destinations based on weather preferences.
+
+### Deliverable 2: Create a Customer Travel Destinations Map
+* Identified travelers weather preferences
+* Within preferences, we found the nearest hotel and added to DataFrame
+* Generated a [map](https://github.com/corispade/World_Weather_Analysis/blob/main/Vacation_Search/WeatherPy_vacation_map.png) with pop-up markers to show hotel name, city, country and current weather description.
+
+### Deliverable 3: Create a Travel Itinerary Map
+* Generated a [map](https://github.com/corispade/World_Weather_Analysis/blob/main/Vacation_Itenerary/WeatherPy_travel_map.png) to show the driving route between 4 selected cities in Japan.
+* Generated a [map](https://github.com/corispade/World_Weather_Analysis/blob/main/Vacation_Itenerary/WeatherPy_travel_map_markers.png) with pop-up markers to show hotel name, city, country and current weather description for those 4 selected cities in Japan.
+
+
+# Summary:
+Travelers can use this app to identify travel destinations based on their desired weather conditions, find the nearest hotels, current weather information and directions to other nearby cities. 
